@@ -9,6 +9,6 @@ export class CocktailRest extends BasicRest {
   }
 
   public getDrinks(params: { name: string }) {
-    return this.getRequest<Cocktail[]>(`/search.php?s=${params.name}`)
+    return this.getRequest<{ drinks: Cocktail[] }>(`/search.php?s=${params.name}`)
   }
 }

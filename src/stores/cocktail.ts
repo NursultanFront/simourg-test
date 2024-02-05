@@ -7,10 +7,12 @@ export const useCocktailStore = defineStore('cocktail', {
     cocktails: [] as Cocktail[]
   }),
   actions: {
-    async fetchCocktail(code?: string) {
+    fetchCocktail(code?: string) {
       const cocktailName = code ?? 'margarita'
 
-      this.cocktails = await api.cocktails.getDrinks({ name: cocktailName })
+      api.cocktails.getDrinks({ name: cocktailName }).then((res) => {
+        this.cocktails = res.drinks
+      })
     }
   }
 })

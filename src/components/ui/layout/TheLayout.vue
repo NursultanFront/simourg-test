@@ -27,7 +27,7 @@ import { cocktailsList } from './data'
   padding: 50px 0;
 
   display: flex;
-
+  height: 100%;
   &__sidebar {
     padding: 30px;
 
@@ -40,6 +40,7 @@ import { cocktailsList } from './data'
   }
   &__content {
     flex-grow: 1;
+    overflow-y: auto;
     border: 1px solid var(--vt-c-text-dark-2);
   }
 
