@@ -1,8 +1,10 @@
 import axios from 'axios'
+import { CocktailRest } from './cocktail-rest'
 
 class Api {
   public constructor() {
     this.endpoint = Api.createEndpoint()
+    this.cocktails = new CocktailRest(this.endpoint)
   }
 
   private static createEndpoint() {
@@ -15,6 +17,7 @@ class Api {
   }
 
   private readonly endpoint
+  public readonly cocktails
 }
 
 export const api = new Api()
