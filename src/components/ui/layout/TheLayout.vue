@@ -5,20 +5,57 @@ import { cocktailsList } from './data'
 <template>
   <section class="main-page">
     <aside class="main-page__sidebar">
-      <RouterLink v-for="item in cocktailsList" :key="item" :to="item">{{ item }}</RouterLink>
+      <RouterLink
+        v-for="item in cocktailsList"
+        :key="item"
+        :to="item"
+        class="main-page__link"
+        active-class="main-page__link--active"
+      >
+        {{ item }}
+      </RouterLink>
     </aside>
 
-    <div class="main-page__content">
+    <main class="main-page__content">
       <RouterView />
-    </div>
+    </main>
   </section>
 </template>
 
 <style scoped lang="scss">
 .main-page {
+  padding: 50px 0;
+
+  display: flex;
+
   &__sidebar {
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border: 1px solid var(--vt-c-text-dark-2);
+    border-right: none;
   }
   &__content {
+    flex-grow: 1;
+    border: 1px solid var(--vt-c-text-dark-2);
   }
+
+  &__link {
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+}
+
+a {
 }
 </style>
