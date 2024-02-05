@@ -1,15 +1,22 @@
-/* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution')
-
 module.exports = {
   root: true,
-  'extends': [
-    'plugin:vue/vue3-essential',
+  env: {
+    node: true
+  },
+  extends: [
     'eslint:recommended',
-    '@vue/eslint-config-typescript',
-    '@vue/eslint-config-prettier/skip-formatting'
+    'plugin:vue/vue3-recommended',
+    'plugin:prettier/recommended',
+    '@vue/eslint-config-typescript/recommended',
+    '@vue/prettier',
+    '@vue/eslint-config-prettier'
   ],
   parserOptions: {
     ecmaVersion: 'latest'
+  },
+  plugins: ['prettier', '@typescript-eslint'],
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   }
 }
