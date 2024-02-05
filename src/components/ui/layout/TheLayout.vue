@@ -1,8 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { cocktailsList } from './data'
+</script>
 
 <template>
   <section class="main-page">
-    <aside class="main-page__sidebar"></aside>
+    <aside class="main-page__sidebar">
+      <RouterLink v-for="item in cocktailsList" :key="item" :to="item">{{ item }}</RouterLink>
+    </aside>
 
     <div class="main-page__content">
       <RouterView />
