@@ -55,4 +55,38 @@ const measures = computed(() => {
   </article>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.drink-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  &__content {
+  }
+
+  &__image {
+  }
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-bottom: 20px;
+    color: hsla(160, 100%, 37%, 1);
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    color: hsla(160, 100%, 37%, 1);
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 10px;
+
+    color: hsla(160, 100%, 37%, 1);
+  }
+}
+</style>
