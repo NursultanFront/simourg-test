@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Cocktail } from '@/api/cocktail-rest/types'
 import { computed } from 'vue'
+import LazyImage from '@/components/ui/lazy-image/LazyImage.vue'
 
 interface IProps {
   data: Cocktail
@@ -50,7 +51,7 @@ const measures = computed(() => {
       </div>
     </div>
     <div class="drink-item__image">
-      <img :src="props.data.strDrinkThumb" alt="" />
+      <LazyImage :image-src="props.data.strDrinkThumb" />
     </div>
   </article>
 </template>

@@ -43,6 +43,7 @@ const store = useCocktailStore()
     border-right: none;
   }
   &__content {
+    padding: 20px;
     flex-grow: 1;
     overflow-y: auto;
     border: 1px solid var(--vt-c-text-dark-2);
