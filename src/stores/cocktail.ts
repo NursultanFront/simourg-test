@@ -4,13 +4,22 @@ import type { Cocktail } from '@/api/cocktail-rest/types'
 
 export const useCocktailStore = defineStore('cocktail', {
   state: () => ({
-    cocktails: [] as Cocktail[]
+    cocktails: {} as Record<string, Cocktail[]>
   }),
   actions: {
     fetchCocktail(code: string) {
-      api.cocktails.getDrinks({ name: code }).then((res) => {
-        this.cocktails = res.drinks
-      })
+      if (this.cocktails[code]) {
+        return
+      }
+
+      api.cocktails
+        .getDrinks({ name: code })
+        .then((res) => {
+          this.cocktails[code] = res.drinks
+        })
+        .catch((error) => {
+          console.error('Ошибка при запросе данных коктейля:', error)
+        })
     }
   }
 })
