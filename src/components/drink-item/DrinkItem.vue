@@ -41,14 +41,16 @@ const measures = useGetData('strMeasure', cocktailData)
 
 <style scoped lang="scss">
 .drink-item {
+  padding: 20px 0;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 
-  &__content {
-  }
+  & + & {
+    margin-top: 20px;
 
-  &__image {
+    border-top: 1px solid hsla(160, 100%, 37%, 1);
   }
 }
 
