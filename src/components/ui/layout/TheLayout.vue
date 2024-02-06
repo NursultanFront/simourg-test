@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { cocktailsList } from './data'
+import { useCocktailStore } from '@/stores/cocktail'
+
+const store = useCocktailStore()
 </script>
 
 <template>
@@ -11,6 +14,7 @@ import { cocktailsList } from './data'
         :to="item"
         class="main-page__link"
         active-class="main-page__link--active"
+        @click="store.fetchCocktail(item)"
       >
         {{ item }}
       </RouterLink>
