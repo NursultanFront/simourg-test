@@ -1,51 +1,51 @@
 export interface Cocktail {
   idDrink: string
   strDrink: string
-  strDrinkAlternate?: null
+  strDrinkAlternate?: Nullable<null>
   strTags: string
-  strVideo?: null
+  strVideo?: Nullable<string>
   strCategory: string
   strIBA: string
   strAlcoholic: string
   strGlass: string
   strInstructions: string
-  strInstructionsES?: null
-  strInstructionsDE: string
-  strInstructionsFR?: null
+  strInstructionsES?: Nullable<string>
+  strInstructionsDE: Nullable<string>
+  strInstructionsFR?: Nullable<null>
   strInstructionsIT: string
   'strInstructionsZH-HANS'?: null
   'strInstructionsZH-HANT'?: null
   strDrinkThumb: string
-  strIngredient1: string
-  strIngredient2: string
-  strIngredient3: string
-  strIngredient4: string
-  strIngredient5: null
-  strIngredient6: null
-  strIngredient7: null
-  strIngredient8: null
-  strIngredient9: null
-  strIngredient10: null
-  strIngredient11: null
-  strIngredient12: null
-  strIngredient13: null
-  strIngredient14: null
-  strIngredient15: null
+  strIngredient1: Nullable<string>
+  strIngredient2: Nullable<string>
+  strIngredient3: Nullable<string>
+  strIngredient4: Nullable<string>
+  strIngredient5: Nullable<string>
+  strIngredient6: Nullable<string>
+  strIngredient7: Nullable<string>
+  strIngredient8: Nullable<string>
+  strIngredient9: Nullable<string>
+  strIngredient10: Nullable<string>
+  strIngredient11: Nullable<string>
+  strIngredient12: Nullable<string>
+  strIngredient13: Nullable<string>
+  strIngredient14: Nullable<string>
+  strIngredient15: Nullable<string>
   strMeasure1: string
   strMeasure2: string
   strMeasure3: string
-  strMeasure4: null
-  strMeasure5: null
-  strMeasure6: null
-  strMeasure7: null
-  strMeasure8: null
-  strMeasure9: null
-  strMeasure10: null
-  strMeasure11: null
-  strMeasure12: null
-  strMeasure13: null
-  strMeasure14: null
-  strMeasure15: null
+  strMeasure4: Nullable<string>
+  strMeasure5: Nullable<string>
+  strMeasure6: Nullable<string>
+  strMeasure7: Nullable<string>
+  strMeasure8: Nullable<string>
+  strMeasure9: Nullable<string>
+  strMeasure10: Nullable<string>
+  strMeasure11: Nullable<string>
+  strMeasure12: Nullable<string>
+  strMeasure13: Nullable<string>
+  strMeasure14: Nullable<string>
+  strMeasure15: Nullable<string>
   strImageSource: string
   strImageAttribution: string
   strCreativeCommonsConfirmed: string
