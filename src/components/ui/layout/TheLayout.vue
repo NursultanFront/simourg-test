@@ -56,6 +56,8 @@ const handleLinkClick = (value: string) => {
     position: relative;
 
     display: flex;
+
+    width: 100%;
     height: 100%;
     @media (max-width: 576px) {
       flex-direction: column;
@@ -95,6 +97,10 @@ const handleLinkClick = (value: string) => {
     flex-grow: 1;
     overflow-y: auto;
     border: 1px solid var(--vt-c-text-dark-2);
+
+    @media (max-width: 576px) {
+      width: 100%;
+    }
 
     &--active {
       filter: blur(5px);
