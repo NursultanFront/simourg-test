@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { Cocktail } from '@/api/cocktail-rest/types'
-import { computed } from 'vue'
+import { useGetData } from '@/composable/useGetData'
 import LazyImage from '@/components/ui/lazy-image/LazyImage.vue'
+import { toRef } from 'vue'
 
 interface IProps {
   data: Cocktail
@@ -9,29 +10,11 @@ interface IProps {
 
 const props = defineProps<IProps>()
 
-const ingredients = computed(() => {
-  const result: string[] = []
-  for (let i = 1; i <= 15; i++) {
-    const key = `strIngredient${i}` as keyof Cocktail
-    const value = props.data[key]
-    if (value) {
-      result.push(value)
-    }
-  }
-  return result.filter((item) => item)
-})
+const cocktailData = toRef(props.data)
 
-const measures = computed(() => {
-  const result: string[] = []
-  for (let i = 1; i <= 15; i++) {
-    const key = `strMeasure${i}` as keyof Cocktail
-    const value = props.data[key]
-    if (value) {
-      result.push(value.trim())
-    }
-  }
-  return result
-})
+const ingredients = useGetData('strIngredient', cocktailData)
+
+const measures = useGetData('strMeasure', cocktailData)
 </script>
 
 <template>
