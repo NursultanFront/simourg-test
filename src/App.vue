@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { useCocktailStore } from './stores/cocktail'
 import { RouterView } from 'vue-router'
-
-const store = useCocktailStore()
-
-onMounted(() => {
-  store.fetchCocktail()
-})
 </script>
 
 <template>

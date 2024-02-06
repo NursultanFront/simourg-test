@@ -7,10 +7,8 @@ export const useCocktailStore = defineStore('cocktail', {
     cocktails: [] as Cocktail[]
   }),
   actions: {
-    fetchCocktail(code?: string) {
-      const cocktailName = code ?? 'margarita'
-
-      api.cocktails.getDrinks({ name: cocktailName }).then((res) => {
+    fetchCocktail(code: string) {
+      api.cocktails.getDrinks({ name: code }).then((res) => {
         this.cocktails = res.drinks
       })
     }
