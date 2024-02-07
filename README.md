@@ -17,4 +17,6 @@ TypeScript
 Pinia
 Axios
 
+## Deploy 
+https://simourg-test.netlify.app/drinks/margarita
 
