@@ -8,8 +8,8 @@ https://docs.google.com/document/d/1h1M5D1GLxGewvNayH5rYj8L0TkXjhOkQJ3XnlrnFk0Q/
 
 ## Установка проекта
 
-pnpm install - для установки зависимостей
-pnpm run dev - для запуска проекта
+- pnpm install - для установки зависимостей
+- pnpm run dev - для запуска проекта
 
 ## Стэк проекта
 - Vue 3 Composition API
