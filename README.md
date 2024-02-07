@@ -12,10 +12,10 @@ pnpm install - для установки зависимостей
 pnpm run dev - для запуска проекта
 
 ## Стэк проекта
-Vue 3 Composition API
-TypeScript
-Pinia
-Axios
+- Vue 3 Composition API
+- TypeScript
+- Pinia
+- Axios
 
 ## Deploy 
 https://simourg-test.netlify.app/drinks/margarita
