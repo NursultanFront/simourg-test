@@ -9,16 +9,17 @@ export const useCocktailStore = defineStore('cocktail', {
   actions: {
     fetchCocktail(code: string) {
       if (this.cocktails[code]) {
-        return
+        return Promise.resolve()
       }
 
-      api.cocktails
+      return api.cocktails
         .getDrinks({ name: code })
         .then((res) => {
           this.cocktails[code] = res.drinks
         })
         .catch((error) => {
           console.error('Ошибка при запросе данных коктейля:', error)
+          return Promise.reject(error)
         })
     }
   }
